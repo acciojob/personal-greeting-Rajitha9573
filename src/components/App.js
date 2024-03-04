@@ -7,7 +7,7 @@ const App = () => {
   let [name, setName] = useState("")
 
   function updateName(event){
-     let name = setName(event.target.value);
+     setName(event.target.value);
     console.log(name);
 
   }
@@ -15,7 +15,7 @@ const App = () => {
     <div>
         {/* Do not remove the main div */}
         <label id="name">Enter your name:</label><br/>
-        <input type="text" onChange={updateName}/>
+        <input type="text" value = {name} onChange={updateName}/>
         <div>Hello {name}!</div>
     </div>
     
